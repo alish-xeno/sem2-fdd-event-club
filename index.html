@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Event Management Club - Creating memorable experiences through amazing events and workshops at APU">
+    <meta name="keywords" content="event management, university club, workshops, networking, APU">
+    <title>Event Management Club | Home</title>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Homepage CSS -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    
+    <!-- ========== HEADER ========== -->
+    <style>
+    /* Header Component Styles - Internal CSS */
+    .header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: var(--spacing-md) 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: var(--shadow-md);
+    }
+    .header__container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header__logo {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: var(--font-heading);
+    }
+    .header__logo:hover {
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+    .header__menu-btn {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: var(--spacing-xs);
+        line-height: 1;
+    }
+    .header__nav ul {
+        list-style: none;
+        display: flex;
+        gap: var(--spacing-lg);
+        margin: 0;
+        padding: 0;
+    }
+    .header__nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding: var(--spacing-xs) var(--spacing-sm);
+        border-radius: var(--border-radius);
+        transition: all var(--transition-speed) ease;
+    }
+    .header__nav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        color: var(--accent-color);
+        text-decoration: none;
+    }
+    .header__nav a.active {
+        background-color: var(--accent-color);
+        color: white;
+    }
+    @media (max-width: 768px) {
+        .header__menu-btn { display: block; }
+        .header__nav {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-color);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height var(--transition-speed) ease;
+        }
+        .header__nav.active {
+            max-height: 400px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .header__nav ul {
+            flex-direction: column;
+            gap: 0;
+            padding: var(--spacing-md);
+        }
+        .header__nav a {
+            display: block;
+            padding: var(--spacing-md);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    }
+    </style>
+    
+    <header class="header">
+        <div class="header__container">
+            <a href="index.html" class="header__logo">
+                <span>Event Club</span>
+            </a>
+            <button class="header__menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/about.html">About</a></li>
+                    <li><a href="pages/achievements.html">Achievements</a></li>
+                    <li><a href="pages/events.html">Events</a></li>
+                    <li><a href="pages/gallery.html">Gallery</a></li>
+                    <li><a href="pages/team.html">Team</a></li>
+                    <li><a href="pages/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        
+        <!-- Hero Section -->
+        <style>
+        .hero {
+            min-height: 80vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+        .hero__content {
+            max-width: 800px;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero__title {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.2;
+        }
+        .hero__subtitle {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.95;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        .hero__btn {
+            display: inline-block;
+            padding: var(--spacing-md) var(--spacing-xl);
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            font-weight: bold;
+            font-size: 1.125rem;
+            transition: all var(--transition-speed) ease;
+            box-shadow: var(--shadow-md);
+        }
+        .hero__btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-lg);
+            text-decoration: none;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .hero { min-height: 60vh; }
+            .hero__title { font-size: 2rem; }
+            .hero__subtitle { font-size: 1rem; }
+            .hero__btn { padding: var(--spacing-sm) var(--spacing-lg); font-size: 1rem; }
+        }
+        </style>
+        
+        <section class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Welcome to Event Management Club</h1>
+                <p class="hero__subtitle">Where Memories Are Made & Connections Flourish</p>
+                <a href="pages/events.html" class="hero__btn">Explore Our Events</a>
+            </div>
+        </section>
+        
+        <!-- About Preview Section -->
+        <section class="section about-preview">
+            <div class="container">
+                <h2 class="section-title text-center">About Our Club</h2>
+                <p class="section-intro text-center">
+                    We are a vibrant community of students passionate about creating memorable experiences 
+                    through workshops, networking events, and social gatherings.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <h3 class="stat-number">500+</h3>
+                        <p class="stat-label">Active Members</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">100+</h3>
+                        <p class="stat-label">Events Organized</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3 class="stat-number">5</h3>
+                        <p class="stat-label">Years Running</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="pages/about.html" class="btn btn-outline">Learn More</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Featured Events Section -->
+        <section class="section section--light featured-events">
+            <div class="container">
+                <h2 class="section-title text-center">Upcoming Events</h2>
+                <p class="section-intro text-center">Join us at our exciting upcoming events</p>
+                
+                <div class="grid grid-3">
+                    <!-- Event Card 1 -->
+                    <article class="event-card">
+                        <div class="event-card__image"></div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Web Development Workshop</h3>
+                            <div class="event-card__meta">
+                                <span>📅 January 30, 2026</span>
+                                <span>📍 Room 101</span>
+                                <span>⏰ 2:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Learn HTML, CSS, and JavaScript basics in this hands-on workshop for beginners.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Open</span>
+                                <a href="pages/events.html" class="event-card__btn">Register</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 2 -->
+                    <article class="event-card">
+                        <div class="event-card__image"></div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Networking Night 2026</h3>
+                            <div class="event-card__meta">
+                                <span>📅 February 5, 2026</span>
+                                <span>📍 APU Hall</span>
+                                <span>⏰ 6:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Connect with industry professionals and fellow students in a casual setting.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Open</span>
+                                <a href="pages/events.html" class="event-card__btn">Register</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 3 -->
+                    <article class="event-card">
+                        <div class="event-card__image"></div>
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Photography Masterclass</h3>
+                            <div class="event-card__meta">
+                                <span>📅 February 12, 2026</span>
+                                <span>📍 Room 205</span>
+                                <span>⏰ 3:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Capture stunning photos with tips from professional photographers.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Open</span>
+                                <a href="pages/events.html" class="event-card__btn">Register</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--spacing-lg);">
+                    <a href="pages/events.html" class="btn btn-primary">View All Events</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Section -->
+        <section class="section cta-section">
+            <div class="container text-center">
+                <h2>Ready to Join Our Community?</h2>
+                <p class="cta-text">Become a member today and start creating amazing memories with us!</p>
+                <a href="pages/register.html" class="btn btn-accent">Join Now</a>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ========== FOOTER ========== -->
+    <style>
+    .footer {
+        background-color: var(--dark-color);
+        color: white;
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+        margin-top: auto;
+    }
+    .footer__container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+    .footer__content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    .footer__section h4 {
+        color: var(--accent-color);
+        margin-bottom: var(--spacing-md);
+        font-size: 1.25rem;
+    }
+    .footer__links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer__links li { margin-bottom: var(--spacing-sm); }
+    .footer__links a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: color var(--transition-speed) ease;
+    }
+    .footer__links a:hover {
+        color: var(--accent-color);
+        text-decoration: none;
+        padding-left: var(--spacing-xs);
+    }
+    .footer__social {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+    .footer__social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        text-decoration: none;
+        transition: all var(--transition-speed) ease;
+    }
+    .footer__social a:hover {
+        background-color: var(--accent-color);
+        transform: translateY(-3px);
+    }
+    .footer__contact p {
+        color: #cccccc;
+        margin-bottom: var(--spacing-sm);
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-sm);
+    }
+    .footer__contact a { color: #cccccc; text-decoration: none; }
+    .footer__contact a:hover { color: var(--accent-color); }
+    .footer__bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: var(--spacing-md);
+        text-align: center;
+        color: #cccccc;
+        font-size: var(--font-size-sm);
+    }
+    .footer__bottom a { color: var(--accent-color); text-decoration: none; }
+    .footer__bottom a:hover { text-decoration: underline; }
+    @media (max-width: 768px) {
+        .footer__content { grid-template-columns: 1fr; text-align: center; }
+        .footer__social { justify-content: center; }
+        .footer__contact p { justify-content: center; }
+    }
+    </style>
+    
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section footer__about">
+                    <h4>Event Management Club</h4>
+                    <p>Creating memorable experiences and building lasting connections through amazing events and workshops.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer__section footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/about.html">About Us</a></li>
+                        <li><a href="pages/events.html">Upcoming Events</a></li>
+                        <li><a href="pages/gallery.html">Photo Gallery</a></li>
+                        <li><a href="pages/team.html">Our Team</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section footer__contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 APU Campus, Technology Park Malaysia</p>
+                    <p>📧 <a href="mailto:info@eventclub.edu">info@eventclub.edu</a></p>
+                    <p>📞 <a href="tel:+60123456789">+60 12-345 6789</a></p>
+                    <p>🕒 Mon-Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Event Management Club. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Global JavaScript -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
