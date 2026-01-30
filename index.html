@@ -9,107 +9,14 @@
     
     <!-- Global CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="css/components/header.css">
     <!-- Homepage CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     
     <!-- ========== HEADER ========== -->
-    <style>
-    /* Header Component Styles - Internal CSS */
-    .header {
-        background-color: var(--primary-color);
-        color: white;
-        padding: var(--spacing-md) 0;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        box-shadow: var(--shadow-md);
-    }
-    .header__container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-md);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .header__logo {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        color: white;
-        font-size: 1.5rem;
-        font-weight: bold;
-        font-family: var(--font-heading);
-    }
-    .header__logo:hover {
-        color: var(--accent-color);
-        text-decoration: none;
-    }
-    .header__menu-btn {
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        padding: var(--spacing-xs);
-        line-height: 1;
-    }
-    .header__nav ul {
-        list-style: none;
-        display: flex;
-        gap: var(--spacing-lg);
-        margin: 0;
-        padding: 0;
-    }
-    .header__nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        padding: var(--spacing-xs) var(--spacing-sm);
-        border-radius: var(--border-radius);
-        transition: all var(--transition-speed) ease;
-    }
-    .header__nav a:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-        color: var(--accent-color);
-        text-decoration: none;
-    }
-    .header__nav a.active {
-        background-color: var(--accent-color);
-        color: white;
-    }
-    @media (max-width: 768px) {
-        .header__menu-btn { display: block; }
-        .header__nav {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background-color: var(--primary-color);
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height var(--transition-speed) ease;
-        }
-        .header__nav.active {
-            max-height: 400px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .header__nav ul {
-            flex-direction: column;
-            gap: 0;
-            padding: var(--spacing-md);
-        }
-        .header__nav a {
-            display: block;
-            padding: var(--spacing-md);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-    }
-    </style>
-    
     <header class="header">
         <div class="header__container">
             <a href="index.html" class="header__logo">
@@ -122,6 +29,7 @@
                     <li><a href="pages/about.html">About</a></li>
                     <li><a href="pages/achievements.html">Achievements</a></li>
                     <li><a href="pages/events.html">Events</a></li>
+                    <li><a href="pages/blog.html">Blog</a></li>
                     <li><a href="pages/gallery.html">Gallery</a></li>
                     <li><a href="pages/team.html">Team</a></li>
                     <li><a href="pages/contact.html">Contact</a></li>
@@ -304,6 +212,59 @@
             </div>
         </section>
         
+        <!-- Blog & News Section -->
+        <section class="section blog-preview">
+            <div class="container">
+                <h2 class="section-title text-center">Latest News & Updates</h2>
+                <p class="section-intro text-center">Stay updated with club announcements, event recaps, and stories from our community</p>
+                
+                <div class="grid grid-3">
+                    <!-- Blog Post 1 -->
+                    <article class="blog-card">
+                        <div class="blog-card__image"></div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">📅 January 25, 2026</span>
+                            <h3 class="blog-card__title">Recap: Annual Club Gala 2025</h3>
+                            <p class="blog-card__excerpt">
+                                What an incredible night! Over 300 members gathered to celebrate achievements and create lasting memories...
+                            </p>
+                            <a href="pages/blog.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 2 -->
+                    <article class="blog-card">
+                        <div class="blog-card__image"></div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">📅 January 20, 2026</span>
+                            <h3 class="blog-card__title">New Partnership Announcement</h3>
+                            <p class="blog-card__excerpt">
+                                We're excited to announce our collaboration with Tech Leaders Malaysia for exclusive workshops...
+                            </p>
+                            <a href="pages/blog.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Blog Post 3 -->
+                    <article class="blog-card">
+                        <div class="blog-card__image"></div>
+                        <div class="blog-card__content">
+                            <span class="blog-card__date">📅 January 15, 2026</span>
+                            <h3 class="blog-card__title">Member Spotlight: Sarah Chen</h3>
+                            <p class="blog-card__excerpt">
+                                Meet Sarah, our outstanding volunteer who has organized 15+ events and inspired countless members...
+                            </p>
+                            <a href="pages/blog.html" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="text-center" style="margin-top: var(--spacing-lg);">
+                    <a href="pages/blog.html" class="btn btn-outline">View All Posts</a>
+                </div>
+            </div>
+        </section>
+        
         <!-- Call to Action Section -->
         <section class="section cta-section">
             <div class="container text-center">
@@ -422,6 +383,7 @@
                         <li><a href="pages/events.html">Upcoming Events</a></li>
                         <li><a href="pages/gallery.html">Photo Gallery</a></li>
                         <li><a href="pages/team.html">Our Team</a></li>
+                        <li><a href="pages/faq.html">FAQ</a></li>
                         <li><a href="pages/contact.html">Contact Us</a></li>
                     </ul>
                 </div>

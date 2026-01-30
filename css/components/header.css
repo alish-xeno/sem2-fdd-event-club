@@ -1,0 +1,113 @@
+/* ============================================
+   HEADER COMPONENT STYLES
+   Used by: All pages
+   Purpose: Navigation header with responsive mobile menu
+============================================ */
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-md) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+}
+
+.header__container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: var(--font-heading);
+}
+
+.header__logo:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.header__menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    line-height: 1;
+}
+
+.header__nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--spacing-lg);
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: all var(--transition-speed) ease;
+}
+
+.header__nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.header__nav a.active {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 768px) {
+    .header__menu-btn {
+        display: block;
+    }
+    
+    .header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-color);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height var(--transition-speed) ease;
+    }
+    
+    .header__nav.active {
+        max-height: 400px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .header__nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: var(--spacing-md);
+    }
+    
+    .header__nav a {
+        display: block;
+        padding: var(--spacing-md);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
