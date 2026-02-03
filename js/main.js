@@ -7,6 +7,7 @@
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
+    initDropdowns();
     initSmoothScroll();
     highlightCurrentPage();
 });
@@ -37,8 +38,8 @@ function initMobileNav() {
             }
         });
         
-        // Close menu when clicking a link
-        const navLinks = nav.querySelectorAll('a');
+        // Close menu when clicking a non-dropdown link
+        const navLinks = nav.querySelectorAll('a:not(.dropdown-toggle)');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
@@ -47,6 +48,43 @@ function initMobileNav() {
             });
         });
     }
+}
+
+/* === DROPDOWN MENU FUNCTIONALITY === */
+function initDropdowns() {
+    const dropdowns = document.querySelectorAll('.header__nav .dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        const toggle = dropdown.querySelector('.dropdown-toggle');
+        
+        if (toggle) {
+            // Mobile: Click to toggle
+            toggle.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    
+                    // Close other dropdowns
+                    dropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('active');
+                }
+            });
+        }
+    });
+    
+    // Close dropdowns when window is resized above mobile breakpoint
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            dropdowns.forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        }
+    });
 }
 
 /* === SMOOTH SCROLL FOR ANCHOR LINKS === */
