@@ -1,0 +1,247 @@
+/* ============================================
+   TEAM PAGE STYLES
+   Page-specific styles for team.html
+============================================ */
+
+/* === PAGE HEADER === */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.page-header__title {
+    margin: 0 0 var(--spacing-md);
+    font-size: 2.5rem;
+}
+
+.page-header__subtitle {
+    font-size: 1.125rem;
+    margin: 0;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* === TEAM SECTION === */
+.team-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.team-section--alt {
+    background: var(--light-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.section-intro {
+    text-align: center;
+    color: #666;
+    margin-bottom: var(--spacing-xl);
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* === TEAM GRID === */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+}
+
+.team-grid--compact {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* === TEAM CARD (Full Version) === */
+.team-card {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-md);
+}
+
+.team-card__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--spacing-md);
+    border: 4px solid var(--primary-color);
+    transition: border-color 0.3s ease;
+}
+
+.team-card:hover .team-card__photo {
+    border-color: var(--accent-color);
+}
+
+.team-card__name {
+    font-size: 1.25rem;
+    margin: 0 0 var(--spacing-xs);
+    color: var(--primary-color);
+}
+
+.team-card__role {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin: 0 0 var(--spacing-md);
+    font-size: 1rem;
+}
+
+.team-card__bio {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 0 0 var(--spacing-md);
+}
+
+.team-card__social {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.team-card__social a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.team-card__social a:hover {
+    background: var(--accent-color);
+    transform: scale(1.1);
+}
+
+/* === TEAM CARD (Compact Version) === */
+.team-card--compact {
+    padding: var(--spacing-md);
+}
+
+.team-card--compact .team-card__photo {
+    width: 120px;
+    height: 120px;
+}
+
+.team-card--compact .team-card__name {
+    font-size: 1.125rem;
+}
+
+.team-card--compact .team-card__role {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* === JOIN TEAM CTA === */
+.join-team-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.join-team-cta h2 {
+    margin: 0 0 var(--spacing-md);
+    font-size: 2rem;
+}
+
+.join-team-cta p {
+    margin: 0 auto var(--spacing-lg);
+    max-width: 700px;
+    font-size: 1.125rem;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.join-team-cta .btn-primary {
+    background: var(--accent-color);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.join-team-cta .btn-primary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* === RESPONSIVE: TABLET === */
+@media (max-width: 768px) {
+    .page-header__title {
+        font-size: 2rem;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+    }
+
+    .team-grid--compact {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .join-team-cta h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* === RESPONSIVE: MOBILE === */
+@media (max-width: 480px) {
+    .page-header__title {
+        font-size: 1.75rem;
+    }
+
+    .page-header__subtitle {
+        font-size: 1rem;
+    }
+
+    .team-grid,
+    .team-grid--compact {
+        grid-template-columns: 1fr;
+    }
+
+    .team-card {
+        padding: var(--spacing-md);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .join-team-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .join-team-cta p {
+        font-size: 1rem;
+    }
+}

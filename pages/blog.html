@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Club News & Updates - Latest announcements, blog posts, and stories from Event Management Club">
+    <title>News & Blog - Event Management Club</title>
+    
+    <!-- Root CSS FIRST -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">
+                <img src="../images/logo.png" alt="Event Club Logo">
+                <span>Event Club</span>
+            </a>
+            <button class="header__menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+    ============================================ -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">News & Blog</h1>
+                <p class="page-header__subtitle">Stay updated with the latest announcements, stories, and insights from our community</p>
+            </div>
+        </section>
+
+        <!-- Featured Post Section -->
+        <section class="featured-section">
+            <div class="container">
+                <div class="featured-post">
+                    <div class="featured-post__image">
+                        <img src="../images/blog-featured.jpg" alt="Featured Post">
+                        <span class="featured-badge">Featured</span>
+                    </div>
+                    <div class="featured-post__content">
+                        <div class="post-meta">
+                            <span class="post-category">Announcement</span>
+                            <span class="post-date">📅 January 20, 2026</span>
+                        </div>
+                        <h2 class="featured-post__title">Web Development Bootcamp 2026: Applications Now Open!</h2>
+                        <p class="featured-post__excerpt">We're excited to announce our biggest bootcamp yet! Join us for 3 intensive days of hands-on learning, covering HTML, CSS, JavaScript, and modern frameworks. Limited seats available - register now to secure your spot!</p>
+                        <a href="#" class="btn-read-more">Read Full Article →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Posts Grid -->
+        <section class="blog-section">
+            <div class="container">
+                
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <button class="filter-btn active" data-category="all">All Posts</button>
+                    <button class="filter-btn" data-category="announcements">Announcements</button>
+                    <button class="filter-btn" data-category="tutorials">Tutorials</button>
+                    <button class="filter-btn" data-category="success">Success Stories</button>
+                    <button class="filter-btn" data-category="updates">Club Updates</button>
+                </div>
+
+                <div class="blog-grid">
+                    
+                    <!-- Post 1 -->
+                    <article class="blog-card" data-category="announcements">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-hackathon.jpg" alt="Hackathon 2026">
+                            <span class="blog-card__category">Announcement</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 18, 2026</span>
+                                <span>✍️ Sarah Lee</span>
+                            </div>
+                            <h3 class="blog-card__title">Annual Tech Hackathon 2026: Save the Date!</h3>
+                            <p class="blog-card__excerpt">Mark your calendars! Our annual 24-hour hackathon returns this March with bigger prizes, more sponsors, and exciting challenges.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 2 -->
+                    <article class="blog-card" data-category="tutorials">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-react.jpg" alt="React Tutorial">
+                            <span class="blog-card__category">Tutorial</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 15, 2026</span>
+                                <span>✍️ David Wong</span>
+                            </div>
+                            <h3 class="blog-card__title">Getting Started with React: A Beginner's Guide</h3>
+                            <p class="blog-card__excerpt">Learn the fundamentals of React.js in this comprehensive tutorial. Perfect for students new to modern JavaScript frameworks.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 3 -->
+                    <article class="blog-card" data-category="success">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-success.jpg" alt="Member Success">
+                            <span class="blog-card__category">Success Story</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 12, 2026</span>
+                                <span>✍️ Priya Kumar</span>
+                            </div>
+                            <h3 class="blog-card__title">From Freshman to Microsoft Intern: John's Journey</h3>
+                            <p class="blog-card__excerpt">How participation in our workshops and hackathons helped one student land a dream internship at Microsoft.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 4 -->
+                    <article class="blog-card" data-category="updates">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-partners.jpg" alt="New Partners">
+                            <span class="blog-card__category">Club Update</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 10, 2026</span>
+                                <span>✍️ Admin Team</span>
+                            </div>
+                            <h3 class="blog-card__title">Welcoming Microsoft & Google as Platinum Sponsors!</h3>
+                            <p class="blog-card__excerpt">We're thrilled to announce partnerships with two tech giants who will support our mission to empower student developers.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 5 -->
+                    <article class="blog-card" data-category="tutorials">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-python.jpg" alt="Python Tutorial">
+                            <span class="blog-card__category">Tutorial</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 8, 2026</span>
+                                <span>✍️ Alex Tan</span>
+                            </div>
+                            <h3 class="blog-card__title">Python for Data Science: Essential Libraries You Need</h3>
+                            <p class="blog-card__excerpt">Explore the must-know Python libraries for data analysis: NumPy, Pandas, Matplotlib, and Scikit-learn.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 6 -->
+                    <article class="blog-card" data-category="announcements">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-workshop.jpg" alt="Workshop Series">
+                            <span class="blog-card__category">Announcement</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 5, 2026</span>
+                                <span>✍️ Sarah Lee</span>
+                            </div>
+                            <h3 class="blog-card__title">February Workshop Series: AI, Cloud Computing & More</h3>
+                            <p class="blog-card__excerpt">Check out our jam-packed February schedule featuring workshops on cutting-edge technologies and career development.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 7 -->
+                    <article class="blog-card" data-category="success">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-startup.jpg" alt="Startup Success">
+                            <span class="blog-card__category">Success Story</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 January 3, 2026</span>
+                                <span>✍️ Priya Kumar</span>
+                            </div>
+                            <h3 class="blog-card__title">EMC Alumni Launch Successful EdTech Startup</h3>
+                            <p class="blog-card__excerpt">Two former club members turned their hackathon project into a thriving startup serving 10,000+ students.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 8 -->
+                    <article class="blog-card" data-category="updates">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-awards.jpg" alt="Club Awards">
+                            <span class="blog-card__category">Club Update</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 December 28, 2025</span>
+                                <span>✍️ Admin Team</span>
+                            </div>
+                            <h3 class="blog-card__title">EMC Wins "Best Student Club of the Year" Award!</h3>
+                            <p class="blog-card__excerpt">We're honored to receive this prestigious recognition from APU Student Affairs for our contributions to campus life.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                    <!-- Post 9 -->
+                    <article class="blog-card" data-category="tutorials">
+                        <div class="blog-card__image">
+                            <img src="../images/blog-git.jpg" alt="Git Tutorial">
+                            <span class="blog-card__category">Tutorial</span>
+                        </div>
+                        <div class="blog-card__content">
+                            <div class="blog-card__meta">
+                                <span>📅 December 25, 2025</span>
+                                <span>✍️ David Wong</span>
+                            </div>
+                            <h3 class="blog-card__title">Mastering Git & GitHub for Team Projects</h3>
+                            <p class="blog-card__excerpt">Essential version control skills every developer needs. Learn branching, merging, pull requests, and collaboration best practices.</p>
+                            <a href="#" class="blog-card__link">Read More →</a>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>← Previous</button>
+                    <span class="pagination-info">Page 1 of 3</span>
+                    <button class="pagination-btn">Next →</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Newsletter Signup -->
+        <section class="newsletter-section">
+            <div class="container">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest club news, event announcements, and tech insights delivered to your inbox weekly!</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </form>
+                <p class="newsletter-note">🔒 We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER COMPONENT (from components/footer.html)
+    ============================================ -->
+    <style>
+    /* Footer Component Styles - Internal CSS */
+    .footer {
+        background: var(--dark-color);
+        color: white;
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+    }
+    .footer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+    .footer__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    .footer__section h4 {
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+        color: var(--accent-color);
+    }
+    .footer__section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer__section ul li {
+        margin-bottom: var(--spacing-sm);
+    }
+    .footer__section a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .footer__section a:hover {
+        color: var(--accent-color);
+    }
+    .footer__social {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+    .footer__social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    .footer__social a:hover {
+        transform: scale(1.1);
+    }
+    .footer__copyright {
+        text-align: center;
+        padding-top: var(--spacing-lg);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.7);
+    }
+    </style>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid">
+                
+                <!-- About Section -->
+                <div class="footer__section">
+                    <h4>About Event Management Club</h4>
+                    <p>Bringing students together through memorable events, workshops, and networking opportunities since 2021.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer__section">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li>📍 APU Campus, Technology Park Malaysia</li>
+                        <li>📧 <a href="mailto:events@apuclub.edu.my">events@apuclub.edu.my</a></li>
+                        <li>📞 <a href="tel:+60123456789">+60 12-345 6789</a></li>
+                        <li>🕒 Mon-Fri: 9:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="footer__copyright">© 2026 Event Management Club. All rights reserved. | Made with ❤️ by BScIT Students</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+    ============================================ -->
+    <!-- Root JS -->
+    <script src="../js/main.js" defer></script>
+    <!-- Page-specific JS -->
+    <script src="../js/blog.js" defer></script>
+
+</body>
+</html>

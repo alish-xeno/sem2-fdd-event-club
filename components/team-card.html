@@ -1,0 +1,123 @@
+<!-- ============================================
+     TEAM MEMBER CARD COMPONENT - Event Management Club
+     Usage: Team page grid
+     Repeatable: Duplicate for each team member
+     Dependencies: None
+============================================ -->
+
+<style>
+/* Team Card Styles - Internal CSS */
+.team-card {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-speed) ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.team-card__photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto var(--spacing-md);
+    border: 4px solid var(--primary-color);
+    transition: border-color var(--transition-speed) ease;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.team-card:hover .team-card__photo {
+    border-color: var(--accent-color);
+}
+
+.team-card__name {
+    font-size: 1.25rem;
+    margin: 0 0 var(--spacing-xs);
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.team-card__role {
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    font-size: var(--font-size-base);
+}
+
+.team-card__bio {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.team-card__social {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+}
+
+.team-card__social a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color: var(--light-color);
+    border-radius: 50%;
+    color: var(--primary-color);
+    text-decoration: none;
+    text-align: center;
+    line-height: 35px;
+    transition: all var(--transition-speed) ease;
+    font-weight: bold;
+}
+
+.team-card__social a:hover {
+    background-color: var(--accent-color);
+    color: white;
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .team-card {
+        padding: var(--spacing-md);
+    }
+    
+    .team-card__photo {
+        width: 120px;
+        height: 120px;
+    }
+}
+</style>
+
+<article class="team-card">
+    <!-- Team Member Photo -->
+    <img src="../images/team-john.jpg" alt="John Doe" class="team-card__photo">
+    
+    <!-- Member Name -->
+    <h3 class="team-card__name">John Doe</h3>
+    
+    <!-- Member Role -->
+    <p class="team-card__role">President</p>
+    
+    <!-- Member Bio -->
+    <p class="team-card__bio">
+        Leading the club since 2024 with a passion for community building and creating 
+        memorable experiences for all members.
+    </p>
+    
+    <!-- Social Media Links -->
+    <div class="team-card__social">
+        <a href="#" aria-label="LinkedIn" title="LinkedIn">in</a>
+        <a href="#" aria-label="Instagram" title="Instagram">📷</a>
+        <a href="#" aria-label="Email" title="Email">✉</a>
+    </div>
+</article>

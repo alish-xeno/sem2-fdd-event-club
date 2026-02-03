@@ -1,0 +1,155 @@
+<!-- ============================================
+     EVENT CARD COMPONENT - Event Management Club
+     Usage: Events page grid, homepage featured events
+     Repeatable: Duplicate for each event
+     Dependencies: None
+============================================ -->
+
+<style>
+/* Event Card Styles - Internal CSS */
+.event-card {
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.event-card__image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.event-card__content {
+    padding: var(--spacing-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-card__title {
+    font-size: 1.25rem;
+    margin: 0 0 var(--spacing-sm);
+    color: var(--primary-color);
+    font-family: var(--font-heading);
+}
+
+.event-card__meta {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    margin-bottom: var(--spacing-md);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+}
+
+.event-card__meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.event-card__desc {
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.6;
+    flex: 1;
+}
+
+.event-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+}
+
+.event-card__btn {
+    display: inline-block;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+}
+
+.event-card__btn:hover {
+    background-color: var(--accent-color);
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+.event-card__status {
+    font-size: var(--font-size-sm);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+}
+
+.event-card__status--upcoming {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.event-card__status--full {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .event-card__meta {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+    
+    .event-card__footer {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+        align-items: stretch;
+    }
+    
+    .event-card__btn {
+        text-align: center;
+    }
+}
+</style>
+
+<article class="event-card">
+    <!-- Event Image -->
+    <img src="../images/event-workshop.jpg" alt="Web Development Workshop" class="event-card__image">
+    
+    <div class="event-card__content">
+        <!-- Event Title -->
+        <h3 class="event-card__title">Web Development Workshop</h3>
+        
+        <!-- Event Meta Information -->
+        <div class="event-card__meta">
+            <span>📅 January 30, 2026</span>
+            <span>📍 Room 101, APU</span>
+            <span>⏰ 2:00 PM - 5:00 PM</span>
+        </div>
+        
+        <!-- Event Description -->
+        <p class="event-card__desc">
+            Learn the fundamentals of HTML, CSS, and JavaScript in this hands-on workshop. 
+            Perfect for beginners looking to start their web development journey!
+        </p>
+        
+        <!-- Event Footer: Status & Button -->
+        <div class="event-card__footer">
+            <span class="event-card__status event-card__status--upcoming">Registration Open</span>
+            <a href="event-details.html" class="event-card__btn">Register Now</a>
+        </div>
+    </div>
+</article>

@@ -1,0 +1,14 @@
+The usage of Web page creation tools is permitted. You have the option of developing the website using the following tools:
+• Adobe Dreamweaver
+• Microsoft Web Expression
+• Microsoft Visual Studio
+The website must fulfil the following criteria, i.e. it should:
+1. Consist of 10 - 20 interlinked pages.
+2. Contain examples of appropriate usage of HTML elements.
+3. Demonstrate usage of Cascading Style Sheets (CSS)
+4. Provide quality content.
+5. Demonstrate usage of multimedia elements.
+6. Demonstrate usage of JavaScript.
+7. Provide appropriate navigation support.
+8. Perform proper file organization and naming convention.
+9. Be viewable on multiple browsers and settings

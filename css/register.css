@@ -1,0 +1,307 @@
+/* ============================================
+   REGISTER PAGE STYLES
+   Page-specific styles for register.html
+============================================ */
+
+/* === PAGE HEADER === */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.page-header__title {
+    margin: 0 0 var(--spacing-md);
+    font-size: 2.5rem;
+}
+
+.page-header__subtitle {
+    font-size: 1.125rem;
+    margin: 0;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* === BENEFITS SECTION === */
+.benefits-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--light-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-color);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+/* === BENEFIT CARD === */
+.benefit-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.benefit-card__icon {
+    font-size: 3rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.benefit-card__title {
+    margin: 0 0 var(--spacing-sm);
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.benefit-card__desc {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* === REGISTER SECTION === */
+.register-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.register-content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--spacing-xl);
+}
+
+/* === REGISTER INFO === */
+.register-info h2 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.register-info__intro {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-lg);
+}
+
+.register-info__steps {
+    background: var(--light-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-lg);
+}
+
+.register-info__steps h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.register-info__steps ol {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    color: #666;
+}
+
+.register-info__steps ol li {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.6;
+}
+
+.register-info__note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    color: #856404;
+    line-height: 1.6;
+}
+
+/* === REGISTER FORM === */
+.register-form-wrapper {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.form-section-title {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-sm);
+    border-bottom: 2px solid var(--light-color);
+    color: var(--primary-color);
+    font-size: 1.25rem;
+}
+
+.form-section-title:first-child {
+    margin-top: 0;
+}
+
+.register-form .form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.register-form label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.register-form .required {
+    color: var(--accent-color);
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="tel"],
+.register-form select,
+.register-form textarea {
+    width: 100%;
+    padding: var(--spacing-md);
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus,
+.register-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.register-form input.error,
+.register-form select.error,
+.register-form textarea.error {
+    border-color: var(--accent-color);
+}
+
+.register-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-hint {
+    display: block;
+    margin-top: var(--spacing-xs);
+    font-size: 0.875rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* === CHECKBOX GROUP === */
+.checkbox-group {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-sm);
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    cursor: pointer;
+    padding: var(--spacing-sm);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease;
+}
+
+.checkbox-label:hover {
+    background: var(--light-color);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+.checkbox-label span {
+    font-weight: normal;
+}
+
+.checkbox-label--terms {
+    display: flex;
+    align-items: flex-start;
+    background: var(--light-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+}
+
+.checkbox-label--terms input[type="checkbox"] {
+    margin-top: 4px;
+}
+
+/* === SUBMIT BUTTON === */
+.btn-submit {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: var(--spacing-md);
+}
+
+/* === RESPONSIVE: TABLET === */
+@media (max-width: 768px) {
+    .page-header__title {
+        font-size: 2rem;
+    }
+
+    .register-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .benefits-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .checkbox-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* === RESPONSIVE: MOBILE === */
+@media (max-width: 480px) {
+    .page-header__title {
+        font-size: 1.75rem;
+    }
+
+    .page-header__subtitle {
+        font-size: 1rem;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .register-form-wrapper {
+        padding: var(--spacing-md);
+    }
+
+    .register-info__steps {
+        padding: var(--spacing-md);
+    }
+
+    .form-section-title {
+        font-size: 1.125rem;
+    }
+}

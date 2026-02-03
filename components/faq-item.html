@@ -1,0 +1,131 @@
+<!-- ============================================
+     FAQ ACCORDION COMPONENT - Event Management Club
+     Usage: FAQ page, About page
+     Repeatable: Duplicate for each question
+     Dependencies: Requires JavaScript for toggle functionality (see below)
+============================================ -->
+
+<style>
+/* FAQ Accordion Styles - Internal CSS */
+.faq-item {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--spacing-sm);
+    overflow: hidden;
+    transition: all var(--transition-speed) ease;
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-item__question {
+    width: 100%;
+    padding: var(--spacing-md);
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font-primary);
+    transition: background-color var(--transition-speed) ease;
+}
+
+.faq-item__question:hover {
+    background-color: var(--light-color);
+}
+
+.faq-item__icon {
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    transition: transform var(--transition-speed) ease;
+    flex-shrink: 0;
+    margin-left: var(--spacing-md);
+}
+
+.faq-item.active .faq-item__icon {
+    transform: rotate(180deg);
+}
+
+.faq-item__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) ease;
+}
+
+.faq-item.active .faq-item__answer {
+    max-height: 300px;
+}
+
+.faq-item__answer-content {
+    padding: 0 var(--spacing-md) var(--spacing-md);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-item__question {
+    background-color: var(--light-color);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .faq-item__question {
+        font-size: 0.9rem;
+        padding: var(--spacing-sm);
+    }
+    
+    .faq-item__answer-content {
+        padding: 0 var(--spacing-sm) var(--spacing-sm);
+        font-size: var(--font-size-sm);
+    }
+}
+</style>
+
+<!-- FAQ Item -->
+<div class="faq-item">
+    <button class="faq-item__question" aria-expanded="false">
+        How do I join the Event Management Club?
+        <span class="faq-item__icon" aria-hidden="true">▼</span>
+    </button>
+    <div class="faq-item__answer">
+        <div class="faq-item__answer-content">
+            <p>Simply fill out our registration form on the Join Us page. Membership is completely free for all students! You can also attend any of our events to learn more about the club before joining.</p>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================
+     FAQ JAVASCRIPT - Add to page-specific JS file
+     or include in a <script> tag at the bottom
+============================================ -->
+<script>
+// FAQ Accordion Toggle Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-item__question');
+        
+        question.addEventListener('click', () => {
+            // Close other open items (optional - remove for multiple open)
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                    otherItem.querySelector('.faq-item__question').setAttribute('aria-expanded', 'false');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+            const isExpanded = item.classList.contains('active');
+            question.setAttribute('aria-expanded', isExpanded);
+        });
+    });
+});
+</script>

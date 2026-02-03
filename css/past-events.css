@@ -1,0 +1,316 @@
+/* ============================================
+   PAST EVENTS PAGE STYLES
+   Page-specific styles for past-events.html
+============================================ */
+
+/* === PAGE HEADER === */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.page-header__title {
+    margin: 0 0 var(--spacing-md);
+    font-size: 2.5rem;
+}
+
+.page-header__subtitle {
+    font-size: 1.125rem;
+    margin: 0;
+    opacity: 0.95;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* === STATS SECTION === */
+.stats-section {
+    padding: var(--spacing-xl) 0;
+    background: var(--light-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.stat-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card__number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: var(--spacing-xs);
+}
+
+.stat-card__label {
+    display: block;
+    color: #666;
+    font-weight: 600;
+}
+
+/* === EVENTS SECTION === */
+.events-section {
+    padding: var(--spacing-xl) 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: var(--spacing-xl);
+    color: var(--primary-color);
+}
+
+/* === TIMELINE === */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: var(--spacing-xl);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--secondary-color);
+}
+
+/* === TIMELINE ITEM === */
+.timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -31px;
+    top: 8px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    border: 4px solid white;
+    box-shadow: 0 0 0 4px var(--secondary-color);
+}
+
+.timeline-content {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-left: var(--spacing-lg);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateX(5px);
+}
+
+.event-date {
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    font-size: 0.95rem;
+}
+
+.event-title {
+    margin: 0 0 var(--spacing-md);
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+.event-meta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.event-type,
+.event-attendance {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.event-type {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.event-attendance {
+    background: var(--light-color);
+    color: var(--text-color);
+}
+
+.event-description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.event-highlights {
+    background: var(--light-color);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+}
+
+.event-highlights strong {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary-color);
+}
+
+.event-highlights ul {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+    color: #666;
+}
+
+.event-highlights ul li {
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.6;
+}
+
+/* === VIEW MORE CTA === */
+.view-more-cta {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.view-more-cta h2 {
+    margin: 0 0 var(--spacing-md);
+    font-size: 2rem;
+}
+
+.view-more-cta p {
+    margin: 0 auto var(--spacing-lg);
+    font-size: 1.125rem;
+    opacity: 0.95;
+}
+
+.view-more-cta .btn-primary {
+    background: var(--accent-color);
+    padding: var(--spacing-md) var(--spacing-xl);
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+}
+
+.view-more-cta .btn-primary:hover {
+    background: white;
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* === RESPONSIVE: TABLET === */
+@media (max-width: 768px) {
+    .page-header__title {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stat-card__number {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .timeline {
+        padding-left: var(--spacing-lg);
+    }
+
+    .timeline-marker {
+        left: -27px;
+    }
+
+    .event-title {
+        font-size: 1.25rem;
+    }
+
+    .view-more-cta h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* === RESPONSIVE: MOBILE === */
+@media (max-width: 480px) {
+    .page-header__title {
+        font-size: 1.75rem;
+    }
+
+    .page-header__subtitle {
+        font-size: 1rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        padding-left: var(--spacing-md);
+    }
+
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-marker {
+        left: -20px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-content {
+        margin-left: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+
+    .event-title {
+        font-size: 1.125rem;
+    }
+
+    .event-meta {
+        flex-direction: column;
+        gap: var(--spacing-sm);
+    }
+
+    .view-more-cta h2 {
+        font-size: 1.5rem;
+    }
+
+    .view-more-cta p {
+        font-size: 1rem;
+    }
+}

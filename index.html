@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <!-- Component CSS -->
     <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
     <!-- Homepage CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -20,6 +21,7 @@
     <header class="header">
         <div class="header__container">
             <a href="index.html" class="header__logo">
+                <img src="images/logo.png" alt="Event Club Logo">
                 <span>Event Club</span>
             </a>
             <button class="header__menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
@@ -46,7 +48,7 @@
         .hero {
             min-height: 80vh;
             background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                        linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+                        url('images/hero-bg.jpg') center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -147,7 +149,7 @@
                 <div class="grid grid-3">
                     <!-- Event Card 1 -->
                     <article class="event-card">
-                        <div class="event-card__image"></div>
+                        <img src="images/event-web-dev.jpg" alt="Web Development Workshop" class="event-card__image">
                         <div class="event-card__content">
                             <h3 class="event-card__title">Web Development Workshop</h3>
                             <div class="event-card__meta">
@@ -167,7 +169,7 @@
                     
                     <!-- Event Card 2 -->
                     <article class="event-card">
-                        <div class="event-card__image"></div>
+                        <img src="images/event-networking.jpg" alt="Networking Night 2026" class="event-card__image">
                         <div class="event-card__content">
                             <h3 class="event-card__title">Networking Night 2026</h3>
                             <div class="event-card__meta">
@@ -187,7 +189,7 @@
                     
                     <!-- Event Card 3 -->
                     <article class="event-card">
-                        <div class="event-card__image"></div>
+                        <img src="images/event-photography.jpg" alt="Photography Masterclass" class="event-card__image">
                         <div class="event-card__content">
                             <h3 class="event-card__title">Photography Masterclass</h3>
                             <div class="event-card__meta">
@@ -277,91 +279,6 @@
     </main>
     
     <!-- ========== FOOTER ========== -->
-    <style>
-    .footer {
-        background-color: var(--dark-color);
-        color: white;
-        padding: var(--spacing-xl) 0 var(--spacing-md);
-        margin-top: auto;
-    }
-    .footer__container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 0 var(--spacing-md);
-    }
-    .footer__content {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: var(--spacing-lg);
-        margin-bottom: var(--spacing-lg);
-    }
-    .footer__section h4 {
-        color: var(--accent-color);
-        margin-bottom: var(--spacing-md);
-        font-size: 1.25rem;
-    }
-    .footer__links ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-    .footer__links li { margin-bottom: var(--spacing-sm); }
-    .footer__links a {
-        color: #cccccc;
-        text-decoration: none;
-        transition: color var(--transition-speed) ease;
-    }
-    .footer__links a:hover {
-        color: var(--accent-color);
-        text-decoration: none;
-        padding-left: var(--spacing-xs);
-    }
-    .footer__social {
-        display: flex;
-        gap: var(--spacing-md);
-        margin-top: var(--spacing-md);
-    }
-    .footer__social a {
-        display: inline-block;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 50%;
-        text-align: center;
-        line-height: 40px;
-        color: white;
-        text-decoration: none;
-        transition: all var(--transition-speed) ease;
-    }
-    .footer__social a:hover {
-        background-color: var(--accent-color);
-        transform: translateY(-3px);
-    }
-    .footer__contact p {
-        color: #cccccc;
-        margin-bottom: var(--spacing-sm);
-        display: flex;
-        align-items: center;
-        gap: var(--spacing-sm);
-    }
-    .footer__contact a { color: #cccccc; text-decoration: none; }
-    .footer__contact a:hover { color: var(--accent-color); }
-    .footer__bottom {
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: var(--spacing-md);
-        text-align: center;
-        color: #cccccc;
-        font-size: var(--font-size-sm);
-    }
-    .footer__bottom a { color: var(--accent-color); text-decoration: none; }
-    .footer__bottom a:hover { text-decoration: underline; }
-    @media (max-width: 768px) {
-        .footer__content { grid-template-columns: 1fr; text-align: center; }
-        .footer__social { justify-content: center; }
-        .footer__contact p { justify-content: center; }
-    }
-    </style>
-    
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__content">

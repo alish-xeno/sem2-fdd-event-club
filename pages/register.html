@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Event Management Club - Register for membership and be part of an exciting community">
+    <title>Register - Event Management Club</title>
+    
+    <!-- Root CSS FIRST -->
+    <link rel="stylesheet" href="../css/styles.css">
+    
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    
+    <!-- Page-specific CSS -->
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">
+                <img src="../images/logo.png" alt="Event Club Logo">
+                <span>Event Club</span>
+            </a>
+            <button class="header__menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================
+         MAIN CONTENT
+    ============================================ -->
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-header__title">Join Our Club</h1>
+                <p class="page-header__subtitle">Become a member and unlock access to exclusive events, workshops, and networking opportunities</p>
+            </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Membership Benefits</h2>
+                <div class="benefits-grid">
+                    
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🎓</div>
+                        <h3 class="benefit-card__title">Free Workshops</h3>
+                        <p class="benefit-card__desc">Access to all technical workshops and skill development sessions</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🤝</div>
+                        <h3 class="benefit-card__title">Networking Events</h3>
+                        <p class="benefit-card__desc">Connect with industry professionals and fellow students</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">🏆</div>
+                        <h3 class="benefit-card__title">Competitions</h3>
+                        <p class="benefit-card__desc">Participate in hackathons, coding challenges, and tech events</p>
+                    </div>
+
+                    <div class="benefit-card">
+                        <div class="benefit-card__icon">📜</div>
+                        <h3 class="benefit-card__title">Certificates</h3>
+                        <p class="benefit-card__desc">Earn certificates for participation and achievements</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form Section -->
+        <section class="register-section">
+            <div class="container">
+                <div class="register-content">
+                    
+                    <!-- Registration Info -->
+                    <div class="register-info">
+                        <h2>Ready to Join?</h2>
+                        <p class="register-info__intro">Fill out the registration form to become a member of Event Management Club. Membership is completely free for all APU students!</p>
+                        
+                        <div class="register-info__steps">
+                            <h3>Registration Process</h3>
+                            <ol>
+                                <li>Complete the registration form</li>
+                                <li>Verify your student email</li>
+                                <li>Receive confirmation and membership ID</li>
+                                <li>Start attending events immediately!</li>
+                            </ol>
+                        </div>
+
+                        <div class="register-info__note">
+                            <strong>Note:</strong> All fields marked with <span class="required">*</span> are required. Make sure to use your student email address for verification.
+                        </div>
+                    </div>
+
+                    <!-- Registration Form -->
+                    <div class="register-form-wrapper">
+                        <form id="register-form" class="register-form" novalidate>
+                            
+                            <!-- Personal Information -->
+                            <h3 class="form-section-title">Personal Information</h3>
+
+                            <!-- Full Name -->
+                            <div class="form-group">
+                                <label for="fullname">Full Name <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="fullname" 
+                                    name="fullname" 
+                                    placeholder="John Doe"
+                                    required
+                                    data-required="true"
+                                    data-min-length="3"
+                                >
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label for="email">Student Email <span class="required">*</span></label>
+                                <input 
+                                    type="email" 
+                                    id="email" 
+                                    name="email" 
+                                    placeholder="john.doe@student.apu.edu.my"
+                                    required
+                                    data-required="true"
+                                    data-validate="email"
+                                >
+                                <small class="form-hint">Must be a valid APU student email address</small>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="form-group">
+                                <label for="phone">Phone Number <span class="required">*</span></label>
+                                <input 
+                                    type="tel" 
+                                    id="phone" 
+                                    name="phone" 
+                                    placeholder="+60 12-345 6789 or 0123456789"
+                                    required
+                                    data-required="true"
+                                    data-validate="phone"
+                                >
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Academic Information -->
+                            <h3 class="form-section-title">Academic Information</h3>
+
+                            <!-- Student ID -->
+                            <div class="form-group">
+                                <label for="student-id">Student ID <span class="required">*</span></label>
+                                <input 
+                                    type="text" 
+                                    id="student-id" 
+                                    name="student-id" 
+                                    placeholder="TP012345"
+                                    required
+                                    data-required="true"
+                                    data-min-length="6"
+                                >
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Program of Study -->
+                            <div class="form-group">
+                                <label for="program">Program of Study <span class="required">*</span></label>
+                                <select 
+                                    id="program" 
+                                    name="program"
+                                    required
+                                    data-required="true"
+                                >
+                                    <option value="">-- Select Your Program --</option>
+                                    <option value="bscit">BSc (Hons) in Information Technology</option>
+                                    <option value="bsccs">BSc (Hons) in Computer Science</option>
+                                    <option value="bsccyber">BSc (Hons) in Cybersecurity</option>
+                                    <option value="bscdata">BSc (Hons) in Data Science</option>
+                                    <option value="bscse">BSc (Hons) in Software Engineering</option>
+                                    <option value="diploma">Diploma in IT</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Year of Study -->
+                            <div class="form-group">
+                                <label for="year">Year of Study <span class="required">*</span></label>
+                                <select 
+                                    id="year" 
+                                    name="year"
+                                    required
+                                    data-required="true"
+                                >
+                                    <option value="">-- Select Year --</option>
+                                    <option value="1">Year 1</option>
+                                    <option value="2">Year 2</option>
+                                    <option value="3">Year 3</option>
+                                    <option value="4">Year 4</option>
+                                </select>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Interests -->
+                            <h3 class="form-section-title">Areas of Interest</h3>
+
+                            <div class="form-group">
+                                <label>Select your areas of interest (check all that apply)</label>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="web-development">
+                                        <span>Web Development</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="mobile-development">
+                                        <span>Mobile Development</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="data-science">
+                                        <span>Data Science & AI</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="cybersecurity">
+                                        <span>Cybersecurity</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="networking">
+                                        <span>Professional Networking</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="interests" value="leadership">
+                                        <span>Leadership & Organization</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Why Join -->
+                            <div class="form-group">
+                                <label for="why-join">Why do you want to join? (Optional)</label>
+                                <textarea 
+                                    id="why-join" 
+                                    name="why-join" 
+                                    rows="4" 
+                                    placeholder="Tell us what motivated you to join our club..."
+                                ></textarea>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="form-group">
+                                <label class="checkbox-label checkbox-label--terms">
+                                    <input 
+                                        type="checkbox" 
+                                        name="terms" 
+                                        id="terms"
+                                        required
+                                        data-required="true"
+                                    >
+                                    <span>I agree to the club's terms and conditions and will adhere to club rules <span class="required">*</span></span>
+                                </label>
+                                <div class="error-message"></div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <button type="submit" class="btn-primary btn-submit">Complete Registration</button>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ============================================
+         FOOTER COMPONENT (from components/footer.html)
+    ============================================ -->
+    <style>
+    /* Footer Component Styles - Internal CSS */
+    .footer {
+        background: var(--dark-color);
+        color: white;
+        padding: var(--spacing-xl) 0 var(--spacing-md);
+    }
+    .footer__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 var(--spacing-md);
+    }
+    .footer__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
+    }
+    .footer__section h4 {
+        margin-top: 0;
+        margin-bottom: var(--spacing-md);
+        color: var(--accent-color);
+    }
+    .footer__section ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .footer__section ul li {
+        margin-bottom: var(--spacing-sm);
+    }
+    .footer__section a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+    .footer__section a:hover {
+        color: var(--accent-color);
+    }
+    .footer__social {
+        display: flex;
+        gap: var(--spacing-md);
+        margin-top: var(--spacing-md);
+    }
+    .footer__social a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: white;
+        font-weight: bold;
+        transition: transform 0.3s ease;
+    }
+    .footer__social a:hover {
+        transform: scale(1.1);
+    }
+    .footer__copyright {
+        text-align: center;
+        padding-top: var(--spacing-lg);
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.7);
+    }
+    </style>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__grid">
+                
+                <!-- About Section -->
+                <div class="footer__section">
+                    <h4>About Event Management Club</h4>
+                    <p>Bringing students together through memorable events, workshops, and networking opportunities since 2021.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook">FB</a>
+                        <a href="#" aria-label="Instagram">IG</a>
+                        <a href="#" aria-label="Twitter">TW</a>
+                        <a href="#" aria-label="LinkedIn">IN</a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer__section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer__section">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li>📍 APU Campus, Technology Park Malaysia</li>
+                        <li>📧 <a href="mailto:events@apuclub.edu.my">events@apuclub.edu.my</a></li>
+                        <li>📞 <a href="tel:+60123456789">+60 12-345 6789</a></li>
+                        <li>🕒 Mon-Fri: 9:00 AM - 5:00 PM</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <p class="footer__copyright">© 2026 Event Management Club. All rights reserved. | Made with ❤️ by BScIT Students</p>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+    ============================================ -->
+    <!-- Root JS FIRST -->
+    <script src="../js/main.js" defer></script>
+    
+    <!-- Form Validation Library -->
+    <script src="../js/form-validation.js" defer></script>
+    
+    <!-- Page-specific JS -->
+    <script src="../js/register.js" defer></script>
+
+</body>
+</html>

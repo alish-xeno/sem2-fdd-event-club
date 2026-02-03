@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Upcoming and past events from Event Management Club">
+    <title>Events | Event Management Club</title>
+    
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Component CSS -->
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <!-- Events Page CSS -->
+    <link rel="stylesheet" href="../css/events.css">
+</head>
+<body>
+    
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+        <div class="header__container">
+            <a href="../index.html" class="header__logo">
+                <img src="../images/logo.png" alt="Event Club Logo">
+                <span>Event Club</span>
+            </a>
+            <button class="header__menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="achievements.html">Achievements</a></li>
+                    <li><a href="events.html" class="active">Events</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="team.html">Team</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- ========== MAIN CONTENT ========== -->
+    <main>
+        
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Events</h1>
+                <p>Discover workshops, networking sessions, and exciting gatherings</p>
+            </div>
+        </section>
+        
+        <!-- Event Filter -->
+        <section class="section filter-section">
+            <div class="container">
+                <div class="event-filters">
+                    <button class="filter-btn active" data-filter="all">All Events</button>
+                    <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-btn" data-filter="workshops">Workshops</button>
+                    <button class="filter-btn" data-filter="networking">Networking</button>
+                    <button class="filter-btn" data-filter="past">Past Events</button>
+                </div>
+                <div class="text-center" style="margin-top: var(--spacing-md);">
+                    <a href="calendar.html" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: var(--spacing-xs);">📅 View Full Calendar</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Upcoming Events -->
+        <section class="section section--light events-section">
+            <div class="container">
+                <h2>Upcoming Events</h2>
+                
+                <div class="events-grid" id="events-container">
+                    <!-- Event Card 1 -->
+                    <article class="event-card" data-category="upcoming workshops">
+                        <img src="../images/event-web-dev.jpg" alt="Web Development Workshop" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Web Development Workshop</h3>
+                            <div class="event-card__meta">
+                                <span>📅 January 30, 2026</span>
+                                <span>📍 Room 101, APU</span>
+                                <span>⏰ 2:00 PM - 5:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Learn the fundamentals of HTML, CSS, and JavaScript in this hands-on workshop. 
+                                Perfect for beginners looking to start their web development journey!
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Registration Open</span>
+                                <a href="register.html" class="event-card__btn">Register Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 2 -->
+                    <article class="event-card" data-category="upcoming networking">
+                        <img src="../images/event-networking.jpg" alt="Networking Night 2026" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Networking Night 2026</h3>
+                            <div class="event-card__meta">
+                                <span>📅 February 5, 2026</span>
+                                <span>📍 APU Main Hall</span>
+                                <span>⏰ 6:00 PM - 9:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Connect with industry professionals, alumni, and fellow students in a casual 
+                                networking environment. Great for building professional relationships!
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Registration Open</span>
+                                <a href="register.html" class="event-card__btn">Register Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 3 -->
+                    <article class="event-card" data-category="upcoming workshops">
+                        <img src="../images/event-photography.jpg" alt="Photography Masterclass" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Photography Masterclass</h3>
+                            <div class="event-card__meta">
+                                <span>📅 February 12, 2026</span>
+                                <span>📍 Room 205</span>
+                                <span>⏰ 3:00 PM - 6:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Capture stunning photos with tips and tricks from professional photographers. 
+                                Learn composition, lighting, and editing techniques.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Registration Open</span>
+                                <a href="register.html" class="event-card__btn">Register Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 4 -->
+                    <article class="event-card" data-category="upcoming workshops">
+                        <img src="../images/event-speaking.jpg" alt="Public Speaking Workshop" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Public Speaking Workshop</h3>
+                            <div class="event-card__meta">
+                                <span>📅 February 20, 2026</span>
+                                <span>📍 Auditorium A</span>
+                                <span>⏰ 1:00 PM - 4:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Overcome your fear of public speaking and develop confidence in presenting. 
+                                Interactive exercises and personalized feedback included.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Registration Open</span>
+                                <a href="register.html" class="event-card__btn">Register Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 5 -->
+                    <article class="event-card" data-category="upcoming networking">
+                        <img src="../images/event-career-fair.jpg" alt="Career Fair 2026" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Career Fair 2026</h3>
+                            <div class="event-card__meta">
+                                <span>📅 March 1, 2026</span>
+                                <span>📍 Sports Complex</span>
+                                <span>⏰ 10:00 AM - 4:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Meet with top employers, explore career opportunities, and submit your resume. 
+                                Over 50 companies expected to attend!
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Registration Open</span>
+                                <a href="register.html" class="event-card__btn">Register Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Event Card 6 -->
+                    <article class="event-card" data-category="upcoming workshops">
+                        <img src="../images/event-marketing.jpg" alt="Digital Marketing Bootcamp" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Digital Marketing Bootcamp</h3>
+                            <div class="event-card__meta">
+                                <span>📅 March 8, 2026</span>
+                                <span>📍 Room 301</span>
+                                <span>⏰ 9:00 AM - 5:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Full-day intensive bootcamp covering SEO, social media marketing, content strategy, 
+                                and analytics. Certificate provided upon completion.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--upcoming">Limited Seats</span>
+                                <a href="register.html" class="event-card__btn">Register Now</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Past Event Card 1 -->
+                    <article class="event-card" data-category="past workshops">
+                        <img src="../images/event-ai-talk.jpg" alt="AI & Machine Learning Talk" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">AI & Machine Learning Talk</h3>
+                            <div class="event-card__meta">
+                                <span>📅 December 10, 2025</span>
+                                <span>📍 Lecture Hall B</span>
+                                <span>⏰ 2:00 PM - 4:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Guest speaker from Google discussed latest trends in AI and machine learning. 
+                                Over 200 students attended this inspiring session.
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--past">Completed</span>
+                                <a href="gallery.html" class="event-card__btn">View Photos</a>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Past Event Card 2 -->
+                    <article class="event-card" data-category="past networking">
+                        <img src="../images/event-celebration.jpg" alt="Year-End Celebration 2025" class="event-card__image">
+                        <div class="event-card__content">
+                            <h3 class="event-card__title">Year-End Celebration 2025</h3>
+                            <div class="event-card__meta">
+                                <span>📅 December 20, 2025</span>
+                                <span>📍 APU Campus Grounds</span>
+                                <span>⏰ 6:00 PM - 10:00 PM</span>
+                            </div>
+                            <p class="event-card__desc">
+                                Celebrated another successful year with food, music, games, and awards ceremony. 
+                                Thank you to all 300+ attendees!
+                            </p>
+                            <div class="event-card__footer">
+                                <span class="event-card__status event-card__status--past">Completed</span>
+                                <a href="gallery.html" class="event-card__btn">View Photos</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Video Section -->
+        <section class="section video-section">
+            <div class="container">
+                <h2 class="text-center">Event Highlights</h2>
+                <p class="text-center">Watch highlights from our recent events</p>
+                
+                <div class="video-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Event Management Club Highlights 2025" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__content">
+                <div class="footer__section footer__about">
+                    <h4>Event Management Club</h4>
+                    <p>Creating memorable experiences and building lasting connections through amazing events and workshops.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer__section footer__links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="achievements.html">Achievements</a></li>
+                        <li><a href="events.html">Upcoming Events</a></li>
+                        <li><a href="gallery.html">Photo Gallery</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer__section footer__contact">
+                    <h4>Contact Us</h4>
+                    <p>📍 APU Campus, Technology Park Malaysia</p>
+                    <p>📧 <a href="mailto:info@eventclub.edu">info@eventclub.edu</a></p>
+                    <p>📞 <a href="tel:+60123456789">+60 12-345 6789</a></p>
+                    <p>🕒 Mon-Fri: 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Event Management Club. All rights reserved. | 
+                   <a href="#">Privacy Policy</a> | 
+                   <a href="#">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Global JavaScript -->
+    <script src="../js/main.js" defer></script>
+    
+    <!-- Event Filter Script -->
+    <script src="../js/events.js" defer></script>
+</body>
+</html>
