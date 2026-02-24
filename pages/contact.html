@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Event Management Club - Get in touch with us for inquiries, feedback, or event collaborations">
+    <meta name="description"
+        content="Contact Event Management Club - Get in touch with us for inquiries, feedback, or event collaborations">
     <title>Contact Us - Event Management Club</title>
-    
+
     <!-- Root CSS FIRST -->
     <link rel="stylesheet" href="../css/styles.css">
-    
+
     <!-- Component CSS -->
     <link rel="stylesheet" href="../css/components/header.css">
     <link rel="stylesheet" href="../css/components/footer.css">
-    
+
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="../css/contact.css">
 </head>
+
 <body>
 
     <!-- ========== HEADER ========== -->
@@ -74,7 +77,8 @@
         <section class="page-header">
             <div class="container">
                 <h1 class="page-header__title">Contact Us</h1>
-                <p class="page-header__subtitle">We'd love to hear from you! Get in touch for inquiries, feedback, or collaboration opportunities.</p>
+                <p class="page-header__subtitle">We'd love to hear from you! Get in touch for inquiries, feedback, or
+                    collaboration opportunities.</p>
             </div>
         </section>
 
@@ -82,12 +86,13 @@
         <section class="contact-section">
             <div class="container">
                 <div class="contact-grid">
-                    
+
                     <!-- Contact Info Block -->
                     <div class="contact-info">
                         <h2>Get In Touch</h2>
-                        <p class="contact-info__intro">Reach out to us through any of the following channels, or fill out the form and we'll get back to you within 24 hours.</p>
-                        
+                        <p class="contact-info__intro">Reach out to us through any of the following channels, or fill
+                            out the form and we'll get back to you within 24 hours.</p>
+
                         <div class="contact-info__item">
                             <div class="contact-info__icon">📍</div>
                             <div class="contact-info__details">
@@ -116,7 +121,8 @@
                             <div class="contact-info__icon">🕒</div>
                             <div class="contact-info__details">
                                 <h3>Office Hours</h3>
-                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</p>
+                                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed
+                                </p>
                             </div>
                         </div>
 
@@ -136,59 +142,35 @@
                     <div class="contact-form-wrapper">
                         <h2>Send Us a Message</h2>
                         <form id="contact-form" class="contact-form" novalidate>
-                            
+
                             <!-- Name Field -->
                             <div class="form-group">
                                 <label for="name">Full Name <span class="required">*</span></label>
-                                <input 
-                                    type="text" 
-                                    id="name" 
-                                    name="name" 
-                                    placeholder="John Doe"
-                                    required
-                                    data-required="true"
-                                    data-min-length="2"
-                                >
+                                <input type="text" id="name" name="name" placeholder="John Doe" required
+                                    data-required="true" data-min-length="2">
                                 <div class="error-message"></div>
                             </div>
 
                             <!-- Email Field -->
                             <div class="form-group">
                                 <label for="email">Email Address <span class="required">*</span></label>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    placeholder="john.doe@student.apu.edu.my"
-                                    required
-                                    data-required="true"
-                                    data-validate="email"
-                                >
+                                <input type="email" id="email" name="email" placeholder="john.doe@student.apu.edu.my"
+                                    required data-required="true" data-validate="email">
                                 <div class="error-message"></div>
                             </div>
 
                             <!-- Phone Field -->
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input 
-                                    type="tel" 
-                                    id="phone" 
-                                    name="phone" 
-                                    placeholder="+60 12-345 6789 or 0123456789"
-                                    data-validate="phone"
-                                >
+                                <input type="tel" id="phone" name="phone" placeholder="+60 12-345 6789 or 0123456789"
+                                    data-validate="phone">
                                 <div class="error-message"></div>
                             </div>
 
                             <!-- Subject Field -->
                             <div class="form-group">
                                 <label for="subject">Subject <span class="required">*</span></label>
-                                <select 
-                                    id="subject" 
-                                    name="subject"
-                                    required
-                                    data-required="true"
-                                >
+                                <select id="subject" name="subject" required data-required="true">
                                     <option value="">-- Select a Subject --</option>
                                     <option value="general">General Inquiry</option>
                                     <option value="membership">Membership Question</option>
@@ -203,15 +185,9 @@
                             <!-- Message Field -->
                             <div class="form-group">
                                 <label for="message">Message <span class="required">*</span></label>
-                                <textarea 
-                                    id="message" 
-                                    name="message" 
-                                    rows="6" 
-                                    placeholder="Tell us what's on your mind..."
-                                    required
-                                    data-required="true"
-                                    data-min-length="10"
-                                ></textarea>
+                                <textarea id="message" name="message" rows="6"
+                                    placeholder="Tell us what's on your mind..." required data-required="true"
+                                    data-min-length="10"></textarea>
                                 <div class="error-message"></div>
                             </div>
 
@@ -229,19 +205,15 @@
         <section class="map-section">
             <div class="container">
                 <h2 class="section-title">Find Us on the Map</h2>
-                <p class="section-intro">Located at APU Campus in Technology Park Malaysia, we're easily accessible by public transport and car.</p>
-                
+                <p class="section-intro">Located at APU Campus in Technology Park Malaysia, we're easily accessible by
+                    public transport and car.</p>
+
                 <!-- Google Maps Embed -->
                 <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.0731489796834!2d101.72700631475396!3d3.053454597751709!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4b2e0b2b5ea1%3A0x2e8e0b2c8e0b5ea1!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation!5e0!3m2!1sen!2smy!4v1234567890123!5m2!1sen!2smy"
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="APU Campus Location">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.1478537314206!2d101.69800137497074!3d3.0550752969207102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc4abb795025d9%3A0x1c37182a714ba968!2sAsia%20Pacific%20University%20of%20Technology%20%26%20Innovation%20(APU)!5e0!3m2!1sen!2snp!4v1771947184534!5m2!1sen!2snp"
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="APU Campus Location">
                     </iframe>
                 </div>
 
@@ -249,10 +221,13 @@
                 <div class="directions-info">
                     <h3>Directions</h3>
                     <ul>
-                        <li><strong>By LRT:</strong> Take the LRT to Bukit Jalil station, then a 10-minute walk to campus</li>
+                        <li><strong>By LRT:</strong> Take the LRT to Bukit Jalil station, then a 10-minute walk to
+                            campus</li>
                         <li><strong>By Bus:</strong> Rapid KL buses T401, T403, T405 stop near the campus</li>
-                        <li><strong>By Car:</strong> Ample parking available at Technology Park Malaysia parking lots</li>
-                        <li><strong>By Taxi/Grab:</strong> Set destination to "APU Campus, Technology Park Malaysia"</li>
+                        <li><strong>By Car:</strong> Ample parking available at Technology Park Malaysia parking lots
+                        </li>
+                        <li><strong>By Taxi/Grab:</strong> Set destination to "APU Campus, Technology Park Malaysia"
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -260,13 +235,14 @@
 
     </main>
 
-        <!-- ========== FOOTER ========== -->
+    <!-- ========== FOOTER ========== -->
     <footer class="footer">
         <div class="footer__container">
             <div class="footer__content">
                 <div class="footer__section footer__about">
                     <h4>Event Management Club</h4>
-                    <p>Creating memorable experiences and building lasting connections through amazing events and workshops.</p>
+                    <p>Creating memorable experiences and building lasting connections through amazing events and
+                        workshops.</p>
                     <div class="footer__social">
                         <a href="https://facebook.com" target="_blank" aria-label="Facebook">f</a>
                         <a href="https://instagram.com" target="_blank" aria-label="Instagram">📷</a>
@@ -298,9 +274,9 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <p>&copy; 2026 Event Management Club. All rights reserved. | 
-                   <a href="privacy.html">Privacy Policy</a> | 
-                   <a href="terms.html">Terms of Service</a>
+                <p>&copy; 2026 Event Management Club. All rights reserved. |
+                    <a href="privacy.html">Privacy Policy</a> |
+                    <a href="terms.html">Terms of Service</a>
                 </p>
             </div>
         </div>
@@ -311,12 +287,13 @@
     ============================================ -->
     <!-- Root JS FIRST -->
     <script src="../js/main.js" defer></script>
-    
+
     <!-- Form Validation Library -->
     <script src="../js/form-validation.js" defer></script>
-    
+
     <!-- Page-specific JS -->
     <script src="../js/contact.js" defer></script>
 
 </body>
+
 </html>
