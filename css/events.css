@@ -154,6 +154,7 @@
 
 .event-card__btn:hover {
     background-color: var(--accent-color);
+    color: #fff;
     text-decoration: none;
     transform: scale(1.05);
 }
