@@ -157,9 +157,10 @@ img {
 }
 
 .btn-primary:hover {
-    background-color: #34495e;
+    background-color: var(--accent-color);
+    color: #fff;
     text-decoration: none;
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.05);
     box-shadow: var(--shadow-md);
 }
 
