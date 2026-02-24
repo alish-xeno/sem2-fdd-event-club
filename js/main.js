@@ -56,20 +56,17 @@ function initDropdowns() {
     
     dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
-        
         if (toggle) {
-            // Mobile: Click to toggle
-            toggle.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
+            toggle.addEventListener('click', function(e) {
+                // Always prevent navigation for dropdown parent on mobile
+                if (window.innerWidth <= 992) {
                     e.preventDefault();
-                    
                     // Close other dropdowns
                     dropdowns.forEach(otherDropdown => {
                         if (otherDropdown !== dropdown) {
                             otherDropdown.classList.remove('active');
                         }
                     });
-                    
                     // Toggle current dropdown
                     dropdown.classList.toggle('active');
                 }

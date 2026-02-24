@@ -1,3 +1,7 @@
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
 /* ============================================
    HEADER COMPONENT STYLES
    Used by: All pages
@@ -218,20 +222,18 @@
 @media (max-width: 768px) {
     .header__container {
         padding: var(--spacing-md);
+        width: 100%;
+        box-sizing: border-box;
     }
-    
     .header__logo {
         font-size: 1.1rem;
     }
-    
     .header__logo img {
         height: 38px;
     }
-    
     .header__menu-btn {
         display: block;
     }
-    
     .header__nav {
         position: absolute;
         top: 100%;
@@ -240,46 +242,43 @@
         background: linear-gradient(135deg, #34495e, #2c3e50);
         display: none;
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        width: 100vw;
+        min-width: 0;
+        overflow-x: hidden;
     }
-    
     .header__nav.active {
         display: block;
         border-top: 2px solid var(--accent-color);
     }
-    
     .header__nav ul {
         flex-direction: column;
         gap: 0;
         padding: 0;
     }
-    
     .header__nav > ul > li {
         width: 100%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
-    
     .header__nav > ul > li:last-child {
         border-bottom: none;
     }
-    
     .header__nav a {
         display: block;
         padding: 1rem var(--spacing-lg);
         border-radius: 0;
         font-size: 1rem;
         position: relative;
+        width: 100%;
+        box-sizing: border-box;
     }
-    
     .header__nav a::after {
         display: none;
     }
-    
     .header__nav a:hover,
     .header__nav a:active {
         background-color: rgba(231, 76, 60, 0.2);
         transform: none;
     }
-    
     /* Mobile Dropdown Styles */
     .header__nav .dropdown-toggle {
         display: flex;
@@ -287,18 +286,15 @@
         align-items: center;
         width: 100%;
     }
-    
     .header__nav .dropdown-toggle::after {
         content: '▾';
         font-size: 0.8rem;
         transition: transform 0.3s ease;
         margin-left: auto;
     }
-    
     .header__nav .dropdown.active .dropdown-toggle::after {
         transform: rotate(180deg);
     }
-    
     .header__nav .dropdown-menu {
         position: static;
         opacity: 1;
@@ -311,31 +307,31 @@
         display: none;
         margin: 0;
         padding: 0;
+        width: 100%;
+        min-width: 0;
+        overflow-x: hidden;
     }
-    
     .header__nav .dropdown.active .dropdown-menu {
         display: flex;
     }
-    
     .header__nav .dropdown-menu a {
         color: rgba(255, 255, 255, 0.9);
         padding: 0.85rem var(--spacing-lg) 0.85rem calc(var(--spacing-lg) + var(--spacing-lg));
         font-size: 0.95rem;
         border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         background: transparent;
+        width: 100%;
+        box-sizing: border-box;
     }
-    
     .header__nav .dropdown-menu li:last-child a {
         border-bottom: none;
     }
-    
     .header__nav .dropdown-menu a::before {
         content: '→';
         position: absolute;
         left: var(--spacing-lg);
         opacity: 0.6;
     }
-    
     .header__nav .dropdown-menu a:hover,
     .header__nav .dropdown-menu a:active {
         background-color: rgba(231, 76, 60, 0.25);
