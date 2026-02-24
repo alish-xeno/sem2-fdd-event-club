@@ -162,6 +162,8 @@
 
 .btn-download:hover {
     background: var(--accent-color);
+    color: white;
+    /* Added explicit white color on hover to fix visibility issue */
     transform: scale(1.02);
 }
 
