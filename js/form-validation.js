@@ -52,10 +52,10 @@ function hasMinLength(value, minLength) {
 function showError(input, message) {
     const formGroup = input.closest('.form-group');
     if (!formGroup) return;
-    
+
     // Add error class to input
     input.classList.add('error');
-    
+
     // Find or create error message element
     let errorElement = formGroup.querySelector('.error-message');
     if (!errorElement) {
@@ -63,7 +63,7 @@ function showError(input, message) {
         errorElement.className = 'error-message';
         formGroup.appendChild(errorElement);
     }
-    
+
     // Set error message and show it
     errorElement.textContent = message;
     errorElement.classList.add('show');
@@ -76,10 +76,10 @@ function showError(input, message) {
 function clearError(input) {
     const formGroup = input.closest('.form-group');
     if (!formGroup) return;
-    
+
     // Remove error class from input
     input.classList.remove('error');
-    
+
     // Hide error message
     const errorElement = formGroup.querySelector('.error-message');
     if (errorElement) {
@@ -97,21 +97,21 @@ function validateField(input) {
     const type = input.type;
     const required = input.hasAttribute('required');
     const name = input.name;
-    
+
     // Clear previous errors
     clearError(input);
-    
+
     // Check if required field is empty
     if (required && !isRequired(value)) {
         showError(input, 'This field is required');
         return false;
     }
-    
+
     // If field is empty and not required, it's valid
     if (!required && value.trim() === '') {
         return true;
     }
-    
+
     // Email validation
     if (type === 'email' || name === 'email') {
         if (!isValidEmail(value)) {
@@ -119,15 +119,15 @@ function validateField(input) {
             return false;
         }
     }
-    
+
     // Phone validation
     if (type === 'tel' || name === 'phone') {
         if (!isValidPhone(value)) {
-            showError(input, 'Please enter a valid phone number (e.g., 0123456789)');
+            showError(input, 'Valid formats: +60123456789, 60123456789, or 0123456789 (9-10 digits)');
             return false;
         }
     }
-    
+
     // Text area minimum length
     if (input.tagName === 'TEXTAREA' && value.trim() !== '') {
         if (!hasMinLength(value, 10)) {
@@ -135,7 +135,7 @@ function validateField(input) {
             return false;
         }
     }
-    
+
     return true;
 }
 
@@ -147,13 +147,13 @@ function validateField(input) {
 function validateForm(form) {
     const inputs = form.querySelectorAll('input, textarea, select');
     let isValid = true;
-    
+
     inputs.forEach(input => {
         if (!validateField(input)) {
             isValid = false;
         }
     });
-    
+
     return isValid;
 }
 
@@ -165,15 +165,15 @@ function validateForm(form) {
 function initFormValidation(formSelector) {
     const form = document.querySelector(formSelector);
     if (!form) return;
-    
+
     const inputs = form.querySelectorAll('input, textarea, select');
-    
+
     // Validate on blur (when user leaves field)
     inputs.forEach(input => {
         input.addEventListener('blur', () => {
             validateField(input);
         });
-        
+
         // Clear error on input (when user starts typing)
         input.addEventListener('input', () => {
             if (input.classList.contains('error')) {
@@ -181,15 +181,15 @@ function initFormValidation(formSelector) {
             }
         });
     });
-    
+
     // Validate on form submit
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         if (validateForm(form)) {
             // Form is valid - show success message
             showSuccessMessage(form);
-            
+
             // Optional: Submit form data via AJAX here
             // For now, we'll just reset the form
             setTimeout(() => {
@@ -216,7 +216,7 @@ function showSuccessMessage(form) {
     if (existingMessage) {
         existingMessage.remove();
     }
-    
+
     // Create success message
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message';
@@ -231,13 +231,13 @@ function showSuccessMessage(form) {
         font-weight: 600;
     `;
     successMessage.textContent = '✓ Form submitted successfully! We will get back to you soon.';
-    
+
     // Insert at top of form
     form.insertBefore(successMessage, form.firstChild);
-    
+
     // Scroll to success message
     successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    
+
     // Remove after 5 seconds
     setTimeout(() => {
         successMessage.style.transition = 'opacity 0.3s ease';
